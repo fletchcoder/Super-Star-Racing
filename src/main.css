@@ -1,0 +1,455 @@
+body {
+    background-color: #43A7EC;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.heading {
+   color: #FDF317;
+   text-shadow: 1.5px 1.5px #F9B10B;
+   font-size: 40px;
+   font-style: italic;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.star {
+    font-size: 35px;
+}
+
+.container {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.car-container {
+    width: 80%;
+    height: 500px;
+    background-color: #183081;
+    border-radius: 10px;
+}
+
+.car-container h1 {
+    color: white;
+    text-shadow: 2px 2px #096ABB;
+}
+
+.game-container {
+    width: 90%;
+    height: 500px;
+    background-color: #43A7EC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 25px solid;
+    border-image: repeating-linear-gradient(180deg, white, white 5px, black 5px, black 10px) 5;
+}
+
+.game-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.no-display {
+    display: none;
+}
+
+.navbar {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar button {
+    border-radius: 50%;
+    height: 80px;
+    width: 90px;
+    font-size: 40px;
+    opacity: 0.7;
+}
+
+.navbar button:hover {
+    opacity: 1.0;
+}
+
+.inactive {
+    background-color: #183081;
+    border: 1px solid #183081;
+    color: #183081;
+}
+
+.active {
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+
+.car-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    margin-top: 15px;
+}
+
+.car {
+    height: 180px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.car button {
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.7;
+    border: 1px solid black;
+}
+
+.car-title {
+    display: none;
+}
+
+.description {
+    display: none;
+}
+
+.car button:hover {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.car button:hover .car-title {
+    display: inline;
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 3px #183081;
+}
+
+.car button img {
+    width: 200px;
+    height: 200px;
+}
+
+.car button:hover img {
+    width: 170px;
+    height: 170px;
+}
+
+.start {
+    width: 60%;
+    background-color: #183081;
+    height: 500px;
+    color: #FDF317;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #F9B10B;
+    line-height: 60px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.start button {
+    background-color: #FDF317;
+    color: #F9B10B;
+    border-color: #F9B10B;
+    width: 80px;
+    height: 30px;
+    font-size: large;
+}
+
+.start button:hover {
+    color: black;
+    border-color: black;
+}
+
+.timer {
+    width: 60%;
+    background-color: #183081;
+    height: 500px;
+    color: #FDF317;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #F9B10B;
+    line-height: 60px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.result-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.result-buttons button {
+    width: 120px;
+}
+
+/*BREAKPOINTS*/
+
+@media only screen and (max-width: 600px) {
+    .heading { 
+        font-size: 30px;
+     }
+     
+     .star {
+         font-size: 25px;
+     }
+
+     .car-container h1 {
+       font-size: 25px;
+    }
+
+    .navbar button {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+
+    .car-container {
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+        width: 90%;
+    }
+
+    .car-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .row-one {
+        margin-top: 100px;
+        margin-bottom: 185px;
+    }
+
+    .car {
+        height: 100px;
+        width: 100%;
+    }
+
+    .car button {
+        width: 100%;
+        display: flex;
+    }
+    .car button img {
+        width: 120px;
+        height: 110px;
+    }
+
+    .car button:hover img {
+        width: 120px;
+        height: 110px;
+    }
+
+    .car button:hover .car-title {
+        display: none;
+    }
+
+    .description {
+        display: inline;
+        color: white;
+        text-shadow: 2px 2px #183081;
+        font-size: 18px;
+    }
+
+    .game-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .start {
+        font-size: 25px;
+        line-height: 50px;
+        width: 80%;
+    }
+
+    .timer {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    .navbar button {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+    }
+
+    .car-container {
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+        width: 90%;
+    }
+
+    .car-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .row-one {
+        margin-top: 100px;
+        margin-bottom: 185px;
+    }
+
+    .car {
+        height: 100px;
+        width: 100%;
+    }
+
+    .car button {
+        width: 100%;
+        display: flex;
+    }
+    .car button img {
+        width: 120px;
+        height: 110px;
+    }
+
+    .car button:hover img {
+        width: 120px;
+        height: 110px;
+    }
+
+    .car button:hover .car-title {
+        display: none;
+    }
+
+    .description {
+        display: inline;
+        color: white;
+        text-shadow: 2px 2px #183081;
+        font-size: 20px;
+    }
+
+    .game-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .start {
+        font-size: 30px;
+        line-height: 50px;
+        width: 80%;
+    }
+
+    .timer {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar button {
+        height: 70px;
+        width: 70px;
+        font-size: 35px;
+    }
+
+    .car-container {
+        width: 85%;
+    }
+
+    .car {
+        height: 150px;
+        width: 90px;
+    }
+
+    .car button img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .car button:hover img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .car button:hover .car-title {
+        font-size: 20px;
+    }
+
+    .game-container img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .start {
+        font-size: 25px;
+        line-height: 60px;
+        width: 70%;
+    }
+
+    .start button {
+        width: 100px;
+        height: 40px;
+        font-size: 25px;
+    }
+    .result-buttons button {
+        width: 120px;
+        font-size: 20px;
+    }
+
+    .timer {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .car-container {
+        width: 85%;
+    }
+
+    .car {
+        height: 180px;
+        width: 100px;
+    }
+
+    .car button img {
+        width: 170px;
+        height: 180px;
+    }
+
+    .start {
+        font-size: 35px;
+        line-height: 55px;
+        width: 70%;
+    }
+
+    .timer {
+        width: 70%;
+    }
+}
