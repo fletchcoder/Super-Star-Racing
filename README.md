@@ -14,17 +14,17 @@ Super Star Racing is a racing game project built to showcase React functionality
 ![image](https://github.com/fletchcoder/Super-Star-Racing/assets/131314453/ddfab24a-26bb-4607-886a-e1a26482ffd1)
 <img src="https://github.com/fletchcoder/Super-Star-Racing/assets/131314453/dd4ec1ff-b224-4003-af7d-df4bc5f41067" width="100%">
 
-On the vehicle select screen, the user will choose both their vehicle and their opponent's vehicle. There are a total of 16 different vehicles with different speeds. Use the arrows at the top of the selection window to navigate between the pages of vehicles. Hovering over the vehicle will tell you the name of the vehicle, and on smaller resolution screens a brief description of the vehicle will display instead. 
+On the vehicle select screen, the user will choose both their vehicle and their opponent's vehicle. There are a total of 16 different vehicles with different speeds. Each vehicle will be set to a state variable that will determine the sources of the images for the two vehicles in the race. Use the arrows at the top of the selection window to navigate between the pages of vehicles. Doing so will trigger a useState that will change the classes of the containers for the vehicles on each page. Hovering over the vehicle will tell you the name of the vehicle, and on smaller resolution screens a brief description of the vehicle will display instead. 
 
 ## Welcome to Super Star Racing 
 ![image](https://github.com/fletchcoder/Super-Star-Racing/assets/131314453/86a1d6d0-05f3-43bd-abe7-92724458125c)
 
-After selecting both vehicles, this is the screen that the user is greeted with. The window provides the user with a brief description of how the game works and leaves a button at the bottom to prompt the user to begin the race. Upon clicking "Go" the game will start by switching to a timer that counts down from 3 seconds. Once the timer reaches 0, it will display "Go!" and then the window and overlay will disappear and the race will begin. 
+After selecting both vehicles, this is the screen that the user is greeted with. The window provides the user with a brief description of how the game works and leaves a button at the bottom to prompt the user to begin the race. Upon clicking "Go" the game will activate a setTimeout, which switches the dialogue window to a timer that uses a useEffect to count down from 3 seconds. Once the timer reaches 0, it will display "Go!" and then the window and overlay will disappear and the race will begin. 
 
 ## The Race 
 ![image](https://github.com/fletchcoder/Super-Star-Racing/assets/131314453/7e6c1314-5d00-4e5d-b254-5d8182c2b312)
 
-The user's car will be on top, while the opponent's car will be on bottom. Both vehicles will move across the screen based on the speed that each is programmed with, completing the tween animation from the framer-motion library in the process. The race is over once the first vehicle crosses the finish line and triggers the next screen. 
+The user's car will be on top, while the opponent's car will be on bottom. Both vehicles will move across the screen based on the speed that each is programmed with, completing the tween animation from the framer-motion library in the process. Each vehicle animation is set to a state variable called move that will start the animation when its value is set to true. The race is over when the first vehicle crosses the finish line and triggers the next screen. 
 
 ## The Result 
 ![image](https://github.com/fletchcoder/Super-Star-Racing/assets/131314453/2bd22f7b-b2a2-4fa5-8eb8-b384e0234c0e)
