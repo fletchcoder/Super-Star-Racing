@@ -6,7 +6,7 @@ Super Star Racing is a racing game project built to showcase React functionality
   * HTML
   * CSS
   * JavaScript
-  * React via Create-React-App
+  * React
   * Framer-motion Animation library
 
 ## Vehicle Select 
